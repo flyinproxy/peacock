@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Peacock API request via curl
-# Pastikan kamu sudah login di browser dan copy header/token terbaru dari DevTools
-
 URL="https://play.ovp.peacocktv.com/video/playouts/event"
 
 curl -v "$URL" \
