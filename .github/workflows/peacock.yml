@@ -1,0 +1,16 @@
+name: Peacock API Test
+
+on:
+  workflow_dispatch:   # bisa dijalankan manual dari tab Actions
+  push:                # atau otomatis setiap kali ada push ke repo
+
+jobs:
+  run-peacock:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Peacock script
+        run: bash source/get.sh
