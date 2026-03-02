@@ -2,7 +2,7 @@ name: Peacock API Test
 
 on:
   workflow_dispatch:   # bisa dijalankan manual dari tab Actions
-  push:                # atau otomatis setiap kali ada push ke repo
+  push:                # atau otomatis setiap kali ada commit ke repo
 
 jobs:
   run-peacock:
@@ -12,5 +12,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Make script executable
+        run: chmod +x source/get.sh
+
       - name: Run Peacock script
-        run: bash source/get.sh
+        run: ./source/get.sh
